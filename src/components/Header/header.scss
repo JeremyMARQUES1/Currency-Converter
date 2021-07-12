@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+
+.header {
+  background-color: vars.$mainColor;
+  height: 20%;
+  position: relative;
+  &__content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: vars.$brightColor;
+    text-align: center;
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    
+  }
+  &__amount {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+}
