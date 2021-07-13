@@ -1,9 +1,20 @@
 @use 'src/styles/vars';
 
 .main {
-  background-color: vars.$brightColor;
+  background-color: vars.$thirdColor;
   overflow-y: scroll;
   height: 60%;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: vars.$thirdColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: vars.$mainColor;
+  }
   &__title, &__currency-list {
     color: vars.$mainColor;
     font-size: 1.2rem;
@@ -11,10 +22,12 @@
     &__item {
       border-top: 1px solid vars.$mainColor;
       padding: 1rem 0 1rem 1.2rem;
-      transition: 0.2s;
+      transition: background-color 1s;
+      cursor: pointer;
     }
     &__item:hover {
       background-color: vars.$alternativeColor;
+      transition-duration: 0.2s;
     }
   }
   &__title {
