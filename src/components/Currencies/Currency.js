@@ -1,9 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Currency = ({ name, updateResult }) => (
-  <li onClick={updateResult} className="main__currency-list__item">{name}</li>
-);
+function Currency({ name, updateResult }) {
+  function closureFunction() {
+    const currencyName = name;
+    updateResult(currencyName);
+  }
+  return (
+    <li
+      className="main__currency-list__item"
+      onClick={closureFunction}
+    >{name}
+    </li>
+  );
+}
 
 Currency.propTypes = {
   name: PropTypes.string.isRequired,

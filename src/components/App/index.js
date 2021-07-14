@@ -34,9 +34,9 @@ class App extends React.Component {
     });
   }
 
-  updateResult(event) {
+  updateResult(currencyName) {
     this.setState({
-      selectedCurrency: event.currentTarget.innerText,
+      selectedCurrency: currencyName,
     });
   }
 
